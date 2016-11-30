@@ -23,20 +23,20 @@ test("for in", function() {
 		age: 102,
 		gender: "male"
 	};
-	var result = "";
+	var xx = "";
 	// for in enumerates the property names of an object
-	for (var property_name in person) {
-  		result = result + property_name;
+	for (var i in person) {
+  		xx = xx + " " +i;
 	}
-	equal("nameagegender", result, 'what is the value of result?');
+	equal(" name age gender", xx, 'what is the value of result?');
 });
 
 test("ternary operator", function() {
 	var fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+	equal("apple", fruit, 'what is the value of fruit?');
 
 	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+	equal("orange", fruit, 'now what is the value of fruit?');
 });
 
 test("switch", function() {
@@ -49,7 +49,7 @@ test("switch", function() {
 			result = 2;
 			break;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal(2, result, 'what is the value of result?');
 });
 
 test("switch default case", function() {
@@ -65,10 +65,10 @@ test("switch default case", function() {
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
+    equal("Merry", result, 'what is the value of result?');
 });
 
 test("null coalescing", function() {
     var result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+    equal("a value", result, 'what is the value of result?');
 });

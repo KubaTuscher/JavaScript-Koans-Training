@@ -7,7 +7,7 @@ test("truthyness of positive numbers", function() {
 });
 
 test("truthyness of negative numbers", function() {
-    var negativeOneIsTruthy = -1 ? true : false;
+    var negativeOneIsTruthy = -5*5 ? true : false;
     equal(true, negativeOneIsTruthy, 'is -1 truthy?');
 });
 
