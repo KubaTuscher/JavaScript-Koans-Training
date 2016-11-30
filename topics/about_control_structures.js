@@ -5,7 +5,7 @@ test("if", function() {
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+	equal(true, isPositive,  'what is the value of isPositive?');
 });
 
 test("for", function() {
@@ -13,21 +13,22 @@ test("for", function() {
 	for (var i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equal(__, counter, 'what is the value of counter?');
+	equal(10 + 1+2+3, counter, 'what is the value of counter?');
 });
 
 test("for in", function() {
 	// this syntax will be explained in about objects
 	var person = {
 		name: "Amory Blaine",
-		age: 102
+		age: 102,
+		gender: "male"
 	};
 	var result = "";
 	// for in enumerates the property names of an object
 	for (var property_name in person) {
   		result = result + property_name;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal("nameagegender", result, 'what is the value of result?');
 });
 
 test("ternary operator", function() {
